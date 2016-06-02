@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.bvrit.happyride.beans.MemberBeans;
+
 public class MemberDAO {
 	
 		  Connection conn;
@@ -14,13 +16,13 @@ public class MemberDAO {
 			  cd = new ConnectionDAO(); 
 			  conn = cd.getConnection();
 		  }
-		public int signup(MemberBean ubean) 	
+		public int signup(MemberBeans mbean) 	
 					throws SQLException{
-			     String user = ubean.getUser();
-			     String password = ubean.getPassword();
-			     String first_name = ubean.getFirst_name();
-			     String last_name = ubean.getLast_name();
-			     int contact_number = ubean.getContact_number();
+			     String user = mbean.getUsername();
+			     String password = mbean.getPassword();
+			     String first_name = mbean.getFirst_name();
+			     String last_name = mbean.getLast_name();
+			     int contact_number = mbean.getContact_number();
 				 String query = "insert into user values(?,?,?,?,?)";
 				 int result = 0;
 			
@@ -34,7 +36,7 @@ public class MemberDAO {
 			     result = st.executeUpdate();
 				 		return result;
 		    }
-		    public boolean login(MemberBean ubean) 
+		    public boolean login(MemberBeans mbean) 
 		    		throws SQLException{
 		    	String user = ubean.getUser();
 			    String password = ubean.getPassword();
