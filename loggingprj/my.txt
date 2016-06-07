@@ -1,0 +1,12 @@
+FATAL - This is the error message..
+FATAL - This is the error message..
+DEBUG - This is debug message
+INFO - This is info message
+WARN - This is warn message
+FATAL - This is fatal message
+ERROR - This is error message
+[main] DEBUG Client 07/06/2016 13:03:36 – This is debug message
+[main] INFO  Client 07/06/2016 13:03:36 – This is info message
+[main] WARN  Client 07/06/2016 13:03:36 – This is warn message
+[main] FATAL Client 07/06/2016 13:03:36 – This is fatal message
+[main] ERROR Client 07/06/2016 13:03:36 – This is error message
